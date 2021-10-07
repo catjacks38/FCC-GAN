@@ -13,6 +13,7 @@ import shutil
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Hyper-parameters
+# General Training Parameters
 TOTAL_EPOCHS = 200
 
 BATCH_MULTIPLIER = 1.8
@@ -25,11 +26,11 @@ IMG_CHANNELS = 3
 LR = 1e-4 * (BATCH_MULTIPLIER ** 0.5)
 BETAS = (0.0, 0.9)
 
-# Gen parameters
+# Generator parameters
 GEN_FEATURES = 32
 Z_SIZE = 100
 
-# Disc parameters
+# Discriminator parameters
 DISC_FEATURES = 32
 DISC_ITERATIONS = 5
 LAMBDA_GP = 10
@@ -37,11 +38,11 @@ LAMBDA_GP = 10
 # Model saving parameters
 LOAD_MODEL = False
 
-MODEL_FP = "FCC_GAN.model"
-TRAINING_INFO_FP = "training.info"
+MODEL_FP = ""
+TRAINING_INFO_FP = ""
 
-# Dataset stuff
-DATASET_PATH = "F:/ML_Datasets/amineDataset256"
+# Dataset parameters
+DATASET_PATH = ""
 
 transforms = transforms.Compose(
     [
@@ -54,9 +55,9 @@ transforms = transforms.Compose(
 dataset = datasets.ImageFolder(root=DATASET_PATH, transform=transforms)
 loader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
 
-# Tensorboard stuffs
+# Tensorboard parameters
 STEP_SIZE = 40
-LOG_DIR_PATH = "logs"
+LOG_DIR_PATH = ""
 
 if LOAD_MODEL:
     print("Loading model and training info...")
