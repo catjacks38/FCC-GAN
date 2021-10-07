@@ -1,7 +1,7 @@
 # FCC-GAN
 ## A Pytorch implementation of FCC-GAN
 
-This implementation is based off of the model in the "FCC-GAN: A Fully Connected and Convolutional Net Architecture for GANs" paper (https://arxiv.org/abs/1905.02417)
+This implementation is based off of the model in the "FCC-GAN: A Fully Connected and Convolutional Net Architecture for GANs" paper (https://arxiv.org/abs/1905.02417).
 
 I used WGAN-GP training to train the model.
 
