@@ -17,7 +17,7 @@ I used downscaled 128x128 images from the "another anime face dataset" dataset f
 All the training variables are located in the top of `train.py` under the `# Hyper-parameters` comment. The default values are the values I used for training on a GTX 1060 with 6 GB of VRAM.
 
 ### General Training Parameters
- - `TOTAL_EPOCS` - The total amount of epochs to train for.
+ - `TOTAL_EPOCHS` - The total amount of epochs to train for.
  - `BATCH_MULTIPLIER` - The multiplier to the base batch size of 64. For example, `BATCH_MULTIPLIER = 1` -> `BATCH_SIZE = 64`; `BATCH_MULTIPLIER = 2` -> `BATCH_SIZE = 128`.
  - `BATCH_SIZE` - The batch size. I would suggest changing `BATCH_MULTIPLIER` instead of `BATCH_SIZE`, because `BATCH_MULIPLIER` affects learning rate, to hopefully yield better results, and just changing `BATCH_SIZE` directly could hurt performance.
 
