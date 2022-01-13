@@ -119,3 +119,5 @@ dmypy.json
 logs/
 training.info
 FCC_GAN.model
+trainingImages/
+exportTBImages.py
